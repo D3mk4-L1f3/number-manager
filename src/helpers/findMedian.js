@@ -1,13 +1,9 @@
 export const findMedian = (numbers) => {
-  const sortedValue = numbers.slice().sort((a, b) => a - b);
+  const middle = Math.floor(numbers.length / 2);
 
-  const middle = Math.floor(sortedValue.length / 2);
-
-  if (sortedValue.length % 2 === 0) {
-    console.log(sortedValue[middle - 1]);
-    console.log(sortedValue[middle]);
-    return (sortedValue[middle - 1] + sortedValue[middle]) / 2;
+  if (numbers.length % 2 === 0) {
+    return (numbers[middle - 1] + numbers[middle]) / 2;
   } else {
-    return sortedValue[middle];
+    return numbers[middle];
   }
 };
